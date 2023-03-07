@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print artifact_path
-        run: echo  The path is ${{ inputs.artifact_path }}
+        run: echo triggred workflow using artifactory push
