@@ -1,9 +1,15 @@
 name: Artifactory Push Workflow
 
 on:
-  #push:
-  #pull_request:
+  # workflow_dispatch is mandatory, so that Artifactory can trigger
+  # the workflow through GitHub REST API.
   workflow_dispatch:
+    # inputs are optional, they may be used to convey contextual data
+    # from the JFrog event to the workflow.
+    inputs:
+      artifact_path:
+        required: true
+        type: string
     
 
 jobs:
